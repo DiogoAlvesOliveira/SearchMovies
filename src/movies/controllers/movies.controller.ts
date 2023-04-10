@@ -35,7 +35,7 @@ export class MoviesController {
     return this.moviesService.findMovieByTitle(title);
   }
 
-  @Delete('delete/:title')
+  @Delete(':title')
   remove(@Param('title') title: string) {
     return this.moviesService.remove(title);
   }
