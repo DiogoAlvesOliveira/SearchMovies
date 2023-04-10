@@ -6,7 +6,7 @@ _________
 
   
 ### ✨ Sobre o projeto:
-O Search Movies API foi desenvolvido para ser comsumido pelo front Search Movies Front.
+O Search Movies API foi desenvolvido para ser comsumido no Search Movies Front.
 
 ## Técnologias usadas:
 
@@ -36,27 +36,31 @@ $ npm run start
 
 <h2 align="center"> Endpoints</h2>
 
-<h2> Verbo GET</h2>
+<h3> Verbo GET</h3>
 
-## Busca por título de filme no serviço OMDBAPI
 
-* Chamar API na url http://localhost:3003/movies/ + título do filme
+* Busca por título de filme no serviço OMDBAPI
+  1. Chamar API na url http://localhost:3003/movies/ + título do filme
+  
+##
 
-## Busca por título favorito no banco de dados
+* Busca por título favorito no banco de dados
+  1. Chamar API na url http://localhost:3003/movies/favorite + título do filme
+_________
 
-* Chamar API na url http://localhost:3003/movies/favorite + título do filme
+<h3> Verbo POST</h3>
 
-<h2> Verbo POST</h2>
+* Adiciona o título do filme aos meus favoritos no banco de dados
+  1. Chamar API na url http://localhost:3003/movies/ passando no body o json title ex: { "title":"titulo do filme" }
 
-## Adiciona o título do filme aos meus favoritos no banco de dados
+_________
 
-* Chamar API na url http://localhost:3003/movies/ passando no body o json title ex: { "title":"titulo do filme" }
+<h3> Verbo DELETE</h3>
 
-<h2> Verbo DELETE</h2>
+* Remove o título do filme aos meus favoritos no banco de dados
+  1. Chamar API na url http://localhost:3003/movies/ + título do filme
 
-## Remove o título do filme aos meus favoritos no banco de dados
-
-* Chamar API na url http://localhost:3003/movies/ + título do filme
+_________
 
 
 <p align="center">
