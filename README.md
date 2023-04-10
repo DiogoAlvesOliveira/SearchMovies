@@ -1,3 +1,68 @@
+# Search Movies API
+Projeto Search Movies - 04/04 à 10/04
+
+
+_________
+
+  
+### ✨ Sobre o projeto:
+O Search Movies API foi desenvolvido para ser comsumido no Search Movies Front.
+
+## Técnologias usadas:
+
+## Back-end:
+
+* TypeScript
+  1. API Rest
+* NestJS
+* TypeORM
+* sqlite3
+
+<h2 align="center"> Instruções para reproduzir o projeto</h2>
+
+## Ambiente de local:
+
+* Clonar repositório em sua máquina
+* Importar em uma IDE de suapreferência
+* Instalar
+```bash
+$ npm install
+```
+* Rodar a aplicação
+```bash
+$ npm run start
+```
+* Comsumir os endpoints que se iniciam com a url http://localhost:3003/movies/
+
+<h2 align="center"> Endpoints</h2>
+
+<h3> Verbo GET</h3>
+
+
+* Busca por título de filme no serviço OMDBAPI
+  1. Chamar API na url http://localhost:3003/movies/ + título do filme
+  
+##
+
+* Busca por título favorito no banco de dados
+  1. Chamar API na url http://localhost:3003/movies/favorite + título do filme
+_________
+
+<h3> Verbo POST</h3>
+
+* Adiciona o título do filme aos meus favoritos no banco de dados
+  1. Chamar API na url http://localhost:3003/movies/ passando no body o json title ex: { "title":"titulo do filme" }
+
+_________
+
+<h3> Verbo DELETE</h3>
+
+* Remove o título do filme aos meus favoritos no banco de dados
+  1. Chamar API na url http://localhost:3003/movies/ + título do filme
+
+_________
+
+
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
 </p>
@@ -26,47 +91,6 @@
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
-## Installation
-
-```bash
-$ npm install
-```
-
-## Running the app
-
-```bash
-# development
-$ npm run start
-
-# watch mode
-$ npm run start:dev
-
-# production mode
-$ npm run start:prod
-```
-
-## Test
-
-```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
-```
-
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
 
 ## License
 
