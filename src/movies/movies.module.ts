@@ -10,7 +10,7 @@ import { FavoriteMovie } from './entities/favorite-movie.entity';
     TypeOrmModule.forFeature([FavoriteMovie]),
     HttpModule.registerAsync({
       useFactory: () => ({
-        timeout: 5000,
+        timeout: 20000,
         maxRedirects: 5,
       }),
     }),
