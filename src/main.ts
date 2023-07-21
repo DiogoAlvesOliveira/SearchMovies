@@ -1,14 +1,14 @@
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
 import helmet from 'helmet';
-import * as cors from 'cors';
+//import * as cors from 'cors';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   const urls: string[] = process.env.CORS_ENABLED_URL.split('|');
 
   app.enableCors({
-    methods: ['GET', 'POST', 'DELETE'],
+    methods: ['GET'],
     origin: urls,
   });
 

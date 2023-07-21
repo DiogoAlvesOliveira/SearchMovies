@@ -1,13 +1,10 @@
 import { Module } from '@nestjs/common';
-import { HttpModule } from '@nestjs/axios';
 import { privateProviders } from './di-providers';
 import { MoviesController } from './controllers/movies.controller';
-import { TypeOrmModule } from '@nestjs/typeorm';
-import { FavoriteMovie } from './entities/favorite-movie.entity';
+import { HttpModule } from '@nestjs/axios';
 
 @Module({
   imports: [
-    TypeOrmModule.forFeature([FavoriteMovie]),
     HttpModule.registerAsync({
       useFactory: () => ({
         timeout: 20000,
